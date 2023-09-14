@@ -1,4 +1,0 @@
-class Modi extends PMofBharath {
-    
-}
-

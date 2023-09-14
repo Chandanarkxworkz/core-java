@@ -1,5 +1,0 @@
-class RubixCube extends CombinationalPuzzle {
-    
-}
-
-

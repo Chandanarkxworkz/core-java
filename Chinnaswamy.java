@@ -1,5 +1,0 @@
-class Chinnaswamy extends Stadium {
-    
-}
-
-

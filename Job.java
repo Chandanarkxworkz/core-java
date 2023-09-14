@@ -1,4 +1,0 @@
-class Job extends Necessity {
-    
-}
-
