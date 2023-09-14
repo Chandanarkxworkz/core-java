@@ -11,7 +11,7 @@ class ChatShopExecutor{
 	chatShop.addChatName("sev puri");
 	chatShop.addChatName("mangode");
 	chatShop.addChatName("papri chaat");
-	chatShop.addChatName("samosa chaat");
+	chatShop.addChatName("Aloo chaat");
 	chatShop.getChatNames();
 	}
 	}

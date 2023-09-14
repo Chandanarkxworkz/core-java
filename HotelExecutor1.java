@@ -10,8 +10,9 @@ class HotelExecutor1{
 	hotel.addMenuName("parota");
 	hotel.addMenuName("chitrana");
 	hotel.addMenuName("pallav");
-	hotel.addMenuName("idli");
+	hotel.addMenuName("biryani");
 	hotel.addMenuName("fish fry");
+	
 	hotel.getMenuNames();
 	}
 	}

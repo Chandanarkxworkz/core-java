@@ -12,7 +12,8 @@ class SpotifyExecutor{
 	spotify.addSongName("Stairway to Heaven by Led Zeppelin");
 	spotify.addSongName("Uptown Funk by Mark Ronson ft. Bruno Mars");
 	spotify.addSongName("Sweet Child o' Mine by Guns N' Roses");
-	spotify.addSongName("I Will Always Love You by Whitney Houston");
+	spotify.addSongName("Sweet Child o' Mine by Guns N' Roses");
+	
 	spotify.getSongNames();
 	}
 	}

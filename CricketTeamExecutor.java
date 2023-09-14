@@ -6,13 +6,15 @@ class CricketTeamExecutor{
 	cricketTeam.addPlayerName("Steve Smith");
 	cricketTeam.addPlayerName("Kane Williamson");
 	cricketTeam.addPlayerName("Joe Root");
+	cricketTeam.addPlayerName("Virat Kohli");
 	cricketTeam.addPlayerName("Rohit Sharma");
 	cricketTeam.addPlayerName("Babar Azam");
 	cricketTeam.addPlayerName("Quinton de Kock");
 	cricketTeam.addPlayerName("David Warner");
 	cricketTeam.addPlayerName("Jasprit Bumrah");
 	cricketTeam.addPlayerName("Kagiso Rabada");
-	cricketTeam.addPlayerName("Ben Stokes");
+	
+	
 	cricketTeam.getPlayerNames();
 	}
 	}

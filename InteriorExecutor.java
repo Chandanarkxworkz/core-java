@@ -11,7 +11,7 @@ class InteriorExecutor{
 	interior.addMaterialName("Glass");
 	interior.addMaterialName("Brick");
 	interior.addMaterialName("Metal");
-	interior.addMaterialName("Concrete");
+	interior.addMaterialName("Carpet");
 	interior.getMaterialNames();
 	}
 	}
