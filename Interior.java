@@ -5,14 +5,14 @@ class Interior {
 	public boolean addMaterialName(String materialName){
 	System.out.println("Inside add material Name()");
 	boolean isAdded=false;
-	//"shhhh..." !=null
+	
 	if(index <materialNames.length ){
 		
 	if(materialName !=null){
 	boolean exists  = checkIfMaterialNameExists(materialName);//length /data/material check
 	if(exists == false){
 	System.out.println("validated material Name.. proceed to add material name");
-	//materialName[0]-"shh..."
+	
 	materialNames[index]= materialName;
 	index++;
 	isAdded = true;
@@ -40,7 +40,7 @@ class Interior {
 		System.out.println("inside check If material Name Exists ():");
 		boolean exists = false;
 	for(int index=0;index<materialNames.length;index++){
-		//shh.....==
+		
 		
 		if(materialNames[index]==materialName){
 			exists = true;
@@ -50,4 +50,38 @@ class Interior {
 		return exists;
 		
 	}
+	public String searchByMaterialName(String materialName){
+		System.out.println("invoked search by material name ");
+		String itemName=null;
+		for (int index=0;index<materialNames.length;index++){
+			if(materialNames[index] == materialName){
+				itemName=materialNames[index];
+				
+			}
+		}
+		return itemName;
+	}
+	
+	String materialNamesAfterDelete []= new String [materialNames.length-1];
+	public boolean deleteBy(String name){
+		boolean isDeleted =false;
+		
+		int ind=0;
+		for (int index=0;index<materialNames.length;index++){
+			
+			if(materialNames[index]!=name){
+				materialNamesAfterDelete[ind++]=materialNames[index];
+				isDeleted=true;
+			}
+			
+		}	
+		return isDeleted;
+	}
+	public void getDeletedMaterialNames(){
+		
+		for(int index=0;index<materialNamesAfterDelete.length;index++){
+			System.out.println(materialNamesAfterDelete[index]);
+		}
+	}
+		
 }

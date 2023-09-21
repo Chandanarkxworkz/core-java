@@ -5,14 +5,14 @@ class ChatShop {
 	public boolean addChatName(String chatName){
 	System.out.println("Inside add chat Name()");
 	boolean isAdded=false;
-	//"shhhh..." !=null
+	
 	if(index <chatNames.length ){
 		
-	if(chatName !=null){//<= then -1 // if (index<chatNames.length) if // if(index >=chatNames.length){ system.out.print }else if (chatNmae!)
+	if(chatName !=null){
 	boolean exists  = checkIfChatNameExists(chatName);//length /data/chat check
 	if(exists == false){
 	System.out.println("validated chat Name.. proceed to add chat name");
-	//chatName[0]-"shh..."
+	
 	chatNames[index]= chatName;
 	index++;
 	isAdded = true;
@@ -40,7 +40,7 @@ class ChatShop {
 		System.out.println("inside check If chat Name Exists ():");
 		boolean exists = false;
 	for(int index=0;index<chatNames.length;index++){
-		//shh.....==
+		
 		
 		if(chatNames[index]==chatName){
 			exists = true;
@@ -50,6 +50,40 @@ class ChatShop {
 		return exists;
 		
 	}
+	public String searchByChatName(String chatName){
+		System.out.println("invoked search by chat name ");
+		String snacksName=null;
+		for (int index=0;index<chatNames.length;index++){
+			if(chatNames[index] == chatName){
+				snacksName=chatNames[index];
+				
+			}
+		}
+		return snacksName;
+	}
+	String chatNamesAfterDelete [] = new String [chatNames.length-1];
+	
+	public boolean deleteBy(String name){
+		boolean isDeleted =false;
+		
+		int ind=0;
+		
+		for (int index=0;index<chatNames.length;index++){
+			
+			if(chatNames[index]!=name){
+				chatNamesAfterDelete[ind++]=chatNames[index];
+				isDeleted=true;
+			}
+		}	
+		return isDeleted;
+	}
+	public void getDeletedChatNames(){
+		
+		for(int index=0;index<chatNamesAfterDelete.length;index++){
+			System.out.println(chatNamesAfterDelete[index]);
+		}
+	}
+		
 }
 
 	

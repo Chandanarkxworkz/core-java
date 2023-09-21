@@ -1,7 +1,7 @@
 class SpotifyExecutor{
 	public static void main(String spo[]){
 	
-	Spotify spotify= new Spotify();
+	PlayList spotify= new PlayList();
 	spotify.addSongName("Bohemian Rhapsody by Queen");
 	spotify.addSongName("Imagine by John Lennon");
 	spotify.addSongName("Billie Jean by Michael Jackson");
@@ -15,5 +15,17 @@ class SpotifyExecutor{
 	spotify.addSongName("Sweet Child o' Mine by Guns N' Roses");
 	
 	spotify.getSongNames();
+	
+	System.out.println("searching for song");
+	String sName =  "sanam re";
+	System.out.println("searching for the song " + sName);
+	String SongNames = spotify.searchBySongName(sName);
+	System.out.println("thank you for searching " + sName);
+	
+	
+	
+	boolean deletedSong = spotify.deleteBy("Rolling in the Deep by Adele");
+	System.out.println("Rolling in the Deep by Adele" + deletedSong);
+	spotify.getDeletedSongNames();
 	}
 	}

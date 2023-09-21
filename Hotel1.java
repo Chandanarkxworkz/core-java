@@ -5,14 +5,14 @@ class Hotel1 {
 	public boolean addMenuName(String menuName){
 	System.out.println("Inside add menu Name()");
 	boolean isAdded=false;
-	//"shhhh..." !=null
+	
 	if(index <menuNames.length ){
 		
 	if(menuName !=null){
 	boolean exists  = checkIfMenuNameExists(menuName);
 	if(exists == false){
 	System.out.println("validated menuName.. proceed to add menu name");
-	//menuName[0]-"shh..."
+	
 	menuNames[index]= menuName;
 	index++;
 	isAdded = true;
@@ -40,7 +40,7 @@ class Hotel1 {
 		System.out.println("inside check If menu Name Exists ():");
 		boolean exists = false;
 	for(int index=0;index<menuNames.length;index++){
-		//shh.....==
+		
 		
 		if(menuNames[index]==menuName){
 			exists = true;
@@ -50,4 +50,38 @@ class Hotel1 {
 		return exists;
 		
 	}
+	public String searchByMenuName(String menuName){
+		System.out.println("invoked search by menu name ");
+		String carteName=null;
+		for (int index=0;index<menuNames.length;index++){
+			if(menuNames[index] == menuName){
+				carteName=menuNames[index];
+				
+			}
+		}
+		return carteName;
+	}
+	String menuNamesAfterDelete [] = new String [menuNames.length-1];
+	
+	public boolean deleteBy(String name){
+		boolean isDeleted =false;
+		
+		int ind=0;
+		
+		for (int index=0;index<menuNames.length;index++){
+			
+			if(menuNames[index]!=name){
+				menuNamesAfterDelete[ind++]=menuNames[index];
+				isDeleted=true;
+			}
+		}	
+		return isDeleted;
+	}
+	public void getDeletedMenuNames(){
+		
+		for(int index=0;index<menuNamesAfterDelete.length;index++){
+			System.out.println(menuNamesAfterDelete[index]);
+		}
+	}
+		
 }

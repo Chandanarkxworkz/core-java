@@ -5,14 +5,14 @@ class Spotify {
 	public boolean addSongName(String songName){
 	System.out.println("Inside add song Name()");
 	boolean isAdded=false;
-	//"shhhh..." !=null
+	
 	if(index <songNames.length ){
 		
 	if(songName !=null){
 	boolean exists  = checkIfSongNameExists(songName);//length /data/song check
 	if(exists == false){
 	System.out.println("validated song Name.. proceed to add song name");
-	//songName[0]-"shh..."
+	
 	songNames[index]= songName;
 	index++;
 	isAdded = true;
@@ -40,7 +40,7 @@ class Spotify {
 		System.out.println("inside check If song Name Exists ():");
 		boolean exists = false;
 	for(int index=0;index<songNames.length;index++){
-		//shh.....==
+	
 		
 		if(songNames[index]==songName){
 			exists = true;
@@ -50,4 +50,38 @@ class Spotify {
 		return exists;
 		
 	}
+	public String searchBySongName(String songName){
+		System.out.println("invoked search by song name ");
+		String musicName=null;
+		for (int index=0;index<songNames.length;index++){
+			if(songNames[index] == songName){
+				musicName=songNames[index];
+				
+			}
+		}
+		return musicName;
+	}
+	String songNamesAfterDelete [] = new String [songNames.length-1];
+	
+	public boolean deleteBy(String name){
+		boolean isDeleted =false;
+		
+		int ind=0;
+		
+		for (int index=0;index<songNames.length;index++){
+			
+			if(songNames[index]!=name){
+				songNamesAfterDelete[ind++]=songNames[index];
+				isDeleted=true;
+			}
+		}	
+		return isDeleted;
+	}
+	public void getDeletedSongNames(){
+		
+		for(int index=0;index<songNamesAfterDelete.length;index++){
+			System.out.println(songNamesAfterDelete[index]);
+		}
+	}
+		
 }

@@ -5,14 +5,14 @@ class CricketTeam {
 	public boolean addPlayerName(String playerName){
 	System.out.println("Inside add player Name()");
 	boolean isAdded=false;
-	//"shhhh..." !=null
+	
 	if(index <playerNames.length ){
 		
 	if(playerName !=null){
 	boolean exists  = checkIfPlayerNameExists(playerName);//length /data/player check
 	if(exists == false){
 	System.out.println("validated player Name.. proceed to add player name");
-	//playerName[0]-"shh..."
+	
 	playerNames[index]= playerName;
 	index++;
 	isAdded = true;
@@ -40,7 +40,7 @@ class CricketTeam {
 		System.out.println("inside check If player Name Exists ():");
 		boolean exists = false;
 	for(int index=0;index<playerNames.length;index++){
-		//shh.....==
+		
 		
 		if(playerNames[index]==playerName){
 			exists = true;
@@ -50,4 +50,38 @@ class CricketTeam {
 		return exists;
 		
 	}
+public String searchByPlayerName(String playerName){
+		System.out.println("invoked search by player name ");
+		String gameName=null;
+		for (int index=0;index<playerNames.length;index++){
+			if(playerNames[index] == playerName){
+				gameName=playerNames[index];
+				
+			}
+		}
+		return gameName;
+	}
+	String playerNamesAfterDelete [] = new String [playerNames.length-1];
+	
+	public boolean deleteBy(String name){
+		boolean isDeleted =false;
+		
+		int ind=0;
+		
+		for (int index=0;index<playerNames.length;index++){
+			
+			if(playerNames[index]!=name){
+				playerNamesAfterDelete[ind++]=playerNames[index];
+				isDeleted=true;
+			}
+		}	
+		return isDeleted;
+	}
+	public void getDeletedPlayerNames(){
+		
+		for(int index=0;index<playerNamesAfterDelete.length;index++){
+			System.out.println(playerNamesAfterDelete[index]);
+		}
+	}
+		
 }

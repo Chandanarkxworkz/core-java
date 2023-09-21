@@ -50,4 +50,38 @@ class OttPlatform1 {
 		return exists;
 		
 	}
+	public String searchByMovieName(String movieName){
+		System.out.println("invoked search by movie name ");
+		String cinemaName=null;
+		for (int index=0;index<movieNames.length;index++){
+			if(movieNames[index] == movieName){
+				cinemaName=movieNames[index];
+				
+			}
+		}
+		return cinemaName;
+	}
+	String movieNamesAfterDelete [] = new String [movieNames.length-1];
+	
+	public boolean deleteBy(String name){
+		boolean isDeleted =false;
+		
+		int ind=0;
+		
+		for (int index=0;index<movieNames.length;index++){
+			// "baby" == "dia"
+			if(movieNames[index]!=name){
+				movieNamesAfterDelete[ind++]=movieNames[index];
+				isDeleted=true;
+			}
+		}	
+		return isDeleted;
+	}
+	public void getDeletedMovieNames(){
+		
+		for(int index=0;index<movieNamesAfterDelete.length;index++){
+			System.out.println(movieNamesAfterDelete[index]);
+		}
+	}
+		
 }

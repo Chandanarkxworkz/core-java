@@ -14,5 +14,18 @@ class HotelExecutor1{
 	hotel.addMenuName("fish fry");
 	
 	hotel.getMenuNames();
+	
+	System.out.println("searching menu");
+	String mName =  "fish fry";
+	System.out.println("searching for the Menu " + mName);
+	String MenuNames = hotel.searchByMenuName(mName);
+	System.out.println("thank you for searching " + mName);
+	
+	
+	
+	boolean deletedMenu = hotel.deleteBy("curry");
+	System.out.println(" the curry is deleted " + deletedMenu);
+	hotel.getDeletedMenuNames();
 	}
 	}
+	

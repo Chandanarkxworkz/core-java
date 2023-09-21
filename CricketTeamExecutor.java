@@ -16,5 +16,18 @@ class CricketTeamExecutor{
 	
 	
 	cricketTeam.getPlayerNames();
+	
+	System.out.println("searching ");
+	String pName =  "Virat Kohli";
+	System.out.println("searching for the Player " + pName);
+	String PlayerNames = cricketTeam.searchByPlayerName(pName);
+	System.out.println("thank you for searching " + pName);
+	
+	
+	
+	boolean deletedPlayer = cricketTeam.deleteBy("Joe Root");
+	System.out.println(" the joe root is deleted " + deletedPlayer);
+	cricketTeam.getDeletedPlayerNames();
 	}
 	}
+	
